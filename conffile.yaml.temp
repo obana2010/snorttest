@@ -1,0 +1,29 @@
+######################################
+# その他の全て
+-
+ misc:
+# 0:all, 1:group 1 stage, 2:group 2 stage
+  architecture: 0
+  timeSlotSize: @2
+  localAlertTimeSlotSize: 1
+  localAlertThreshold: 0
+  globalAlertTimeSlotSize: 1
+  globalAlertThreshold: 0
+  globalAlertGenerationSlot: 20
+  blacklistLastTimeSlotSize: 30
+  nodelistfile: nodelistfile.yaml
+  logfile: logfile.@1.log
+# 0:false, 1:true
+  fakedata: 1
+######################################
+# KyotoTycoonの起動引数
+-
+ ktargs:
+  - op_alert_cu
+  - -log
+  - ktlog.@1.log
+  - -pid
+  - ktserver.pid
+  - -port
+  - @1
+  - -th

@@ -1,0 +1,5 @@
+
+cd ${DATAROOT}/${PORTNUM}
+
+$BARNYARD2PATH -n -c ${DATAROOT}/${PORTNUM}/barnyard2.conf -d ${DATAROOT}/${PORTNUM} -f unified2merged.log >${DATAROOT}/${PORTNUM}/barnyard2.log 2>&1 &
+echo $! >${DATAROOT}/${PORTNUM}/barnyard2.pid

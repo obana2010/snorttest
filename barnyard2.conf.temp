@@ -1,0 +1,9 @@
+config reference_file:      /etc/snort/conf.d/reference.config
+config classification_file: /etc/snort/conf.d/classification.config
+config gen_file:            /etc/snort/conf.d/gen-msg.map
+config sid_file:            /etc/snort/conf.d/sid-msg.map
+
+config logdir: .
+
+input unified2
+
