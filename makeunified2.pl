@@ -9,6 +9,7 @@ use warnings;
 use Data::Dumper;
 use Socket;
 use Time::Piece ();
+use Time::HiRes qw/usleep/;
 
 use IO::Handle;
 STDOUT->autoflush(1);
@@ -88,12 +89,14 @@ sub main {
             my $timeslot_localtime = ($time->epoch + (60 * 60 * 9)) / $slotsize; # JST?
             #my $timeslot_localtime = ($time->epoch) / $slotsize; # JST?
             if (!$batchmode && ($timeslot_localtime < $timeslot_current)) {
-                sleep(1);
+                #sleep(1);
+                usleep(100000); # 0.1 sec
                 print "[$timeslot_localtime] [$timeslot_current]\n";
                 next;
             } else {
                 # start!
                 print "\n";
+                sleep(4); # drift from barnyard2
                 last;
             }
         }
