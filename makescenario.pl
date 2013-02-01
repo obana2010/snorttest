@@ -177,7 +177,7 @@ sub main() {
 
     # pickup target domain
     my $target_domain_name;
-    if (int(rand(100 + 1)) < $client_random_ratio) {
+    if (int(rand(100 + 1)) <= $client_random_ratio) {
       # random target
       #print "random\n";
       $target_domain_name = "domainall";
