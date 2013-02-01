@@ -50,7 +50,7 @@ sub main {
     my $time = Time::Piece::localtime();
     my $test_start_time = Time::Piece->strptime($time->ymd . ' ' . $startrealtime . ':00', '%Y-%m-%d %H:%M:%S');
     my $diffsec = $test_start_time->epoch - $time->epoch - (60 * 60 * 9); # JST
-    if (!$batchmode && ($diffsec < 0 || 300 < $diffsec)) {
+    if (!$batchmode && ($diffsec < 0 || 600 < $diffsec)) {
         print $test_start_time->datetime . " - " . $time->datetime . "\n";
         die("bad start time. [$diffsec]");
     }
