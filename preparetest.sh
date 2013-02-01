@@ -46,7 +46,7 @@ do
 done
 
 # theread
-echo "  - 30" >>${DATAROOT}/10000/conffile.yaml
+echo "  - 50" >>${DATAROOT}/10000/conffile.yaml
 for i in $(seq 10001 $NODEMAX)
 do
   echo "  - 3" >>${DATAROOT}/${i}/conffile.yaml
