@@ -1,0 +1,140 @@
+[127.0.0.1:10001]
+- 
+ features: 
+  - domain003
+  - domain007
+  - domain012
+  - domain014
+[127.0.0.1:10002]
+- 
+ features: 
+  - domain006
+  - domain007
+  - domain010
+  - domain011
+  - domain012
+  - domain017
+  - domain018
+[127.0.0.1:10003]
+- 
+ features: 
+  - domain000
+  - domain008
+[127.0.0.1:10004]
+- 
+ features: 
+  - domain001
+  - domain005
+  - domain016
+  - domain019
+[127.0.0.1:10005]
+- 
+ features: 
+  - domain006
+  - domain007
+  - domain010
+  - domain012
+[127.0.0.1:10006]
+- 
+ features: 
+  - domain002
+  - domain006
+  - domain009
+  - domain013
+  - domain015
+  - domain018
+[127.0.0.1:10007]
+- 
+ features: 
+  - domain018
+  - domain019
+[127.0.0.1:10008]
+- 
+ features: 
+  - domain000
+  - domain002
+  - domain003
+  - domain004
+  - domain014
+[127.0.0.1:10009]
+- 
+ features: 
+  - domain003
+  - domain004
+  - domain010
+  - domain011
+  - domain013
+  - domain015
+[127.0.0.1:10010]
+- 
+ features: 
+  - domain016
+[127.0.0.1:10011]
+- 
+ features: 
+  - domain001
+  - domain005
+  - domain006
+  - domain008
+[127.0.0.1:10012]
+- 
+ features: 
+  - domain000
+  - domain007
+  - domain009
+  - domain011
+[127.0.0.1:10013]
+- 
+ features: 
+[127.0.0.1:10014]
+- 
+ features: 
+  - domain000
+  - domain001
+  - domain011
+  - domain014
+  - domain016
+[127.0.0.1:10015]
+- 
+ features: 
+  - domain002
+  - domain003
+  - domain010
+  - domain018
+[127.0.0.1:10016]
+- 
+ features: 
+  - domain005
+  - domain008
+  - domain014
+  - domain017
+  - domain019
+[127.0.0.1:10017]
+- 
+ features: 
+  - domain005
+  - domain009
+  - domain013
+  - domain015
+  - domain016
+  - domain017
+[127.0.0.1:10018]
+- 
+ features: 
+  - domain001
+  - domain013
+[127.0.0.1:10019]
+- 
+ features: 
+  - domain002
+  - domain004
+  - domain009
+  - domain015
+  - domain019
+[127.0.0.1:10020]
+- 
+ features: 
+  - domain004
+  - domain008
+  - domain012
+  - domain017
