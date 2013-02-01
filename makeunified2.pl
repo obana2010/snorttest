@@ -96,7 +96,7 @@ sub main {
             } else {
                 # start!
                 print "\n";
-                sleep(4); # drift from barnyard2
+                sleep(7); # drift from barnyard2
                 last;
             }
         }
