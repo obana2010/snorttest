@@ -46,10 +46,10 @@ do
 done
 
 # theread
-echo "  - 20" >>${DATAROOT}/10000/conffile.yaml
+echo "  - 30" >>${DATAROOT}/10000/conffile.yaml
 for i in $(seq 10001 $NODEMAX)
 do
-  echo "  - 1" >>${DATAROOT}/${i}/conffile.yaml
+  echo "  - 3" >>${DATAROOT}/${i}/conffile.yaml
 done
 
 # make conffiledomain.dat
