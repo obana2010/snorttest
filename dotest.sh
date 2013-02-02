@@ -11,6 +11,7 @@ if [ $# -ne 2 ]; then
 fi
 
 cp -p ${SCENARIOFILE} ${DATAROOT}
+cp -p testinclude.sh ${DATAROOT}
 
 for i in $(seq 10000 $NODEMAX)
 do
