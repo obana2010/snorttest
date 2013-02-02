@@ -12,6 +12,7 @@ fi
 
 cp -p ${SCENARIOFILE} ${DATAROOT}
 cp -p testinclude.sh ${DATAROOT}
+cp -p domainfile.dat ${DATAROOT}
 
 for i in $(seq 10000 $NODEMAX)
 do
