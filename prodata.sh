@@ -37,6 +37,7 @@ i=10000
 ###################################
 # Client
 blacklistHitTotal=0
+blacklistNotHitTotal=0
 store_global_alertTotal=0
 for i in $(seq 10000 $NODEMAX)
 do
@@ -52,9 +53,13 @@ do
   # blacklistHit
   blacklistHit=`grep blacklistHit ${DATAROOT}/${i}/logfile.${i}.log | wc -l`
   blacklistHitTotal=$(($blacklistHitTotal+$blacklistHit))
+  blacklistNotHit=`grep blacklistNotHit ${DATAROOT}/${i}/logfile.${i}.log | wc -l`
+  blacklistNotHitTotal=$(($blacklistNotHitTotal+$blacklistNotHit))
+
 done
 echo "store_global_alertTotal ${store_global_alertTotal}"
 echo "blacklistHitTotal ${blacklistHitTotal}"
+echo "blacklistNotHitTotal ${blacklistNotHitTotal}"
 
 total=$(($total+$store_global_alertTotal))
 echo $total $shareBlacklistRecord $store_global_alertTotal $getDomainNodeList
