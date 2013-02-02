@@ -170,14 +170,17 @@ sub main() {
 
     # start and end
     my $timeslot_client_start = int(rand($timeslot_count));
-    my $timeslot_client_end = $timeslot_client_start + $timeslots_client_attack_continue;
-    if ($timeslot_test_end < $timeslot_client_end) {
-      $timeslot_client_end = $timeslot_test_end
-    }
+    my $timeslot_client_end = $timeslot_client_start + $timeslots_client_attack_continue - 1;
+#    # cut after test end
+#    if ($timeslot_test_end < $timeslot_client_end) {
+#      $timeslot_client_end = $timeslot_test_end
+#    }
 
     # pickup target domain
     my $target_domain_name;
-    if (int(rand(100 + 1)) <= $client_random_ratio) {
+#    if (int(rand(100 + 1)) <= $client_random_ratio) {
+    if ($i < ($clients_count * $client_random_ratio / 100)) {
+
       # random target
       #print "random\n";
       $target_domain_name = "domainall";
@@ -208,7 +211,11 @@ sub main() {
 
   ##############################################
   # timeslot loop
-  for (my $timeslot_current = $timeslot_test_start; $timeslot_current < $timeslot_test_end; $timeslot_current++) {
+  my $existattacker = 0;
+  #for (my $timeslot_current = $timeslot_test_start; $timeslot_current < $timeslot_test_end; $timeslot_current++) {
+  for (my $timeslot_current = $timeslot_test_start; ; $timeslot_current++) {
+
+    $existattacker = 0;
 
     # client loop
     foreach my $client (@clients) {
@@ -216,6 +223,9 @@ sub main() {
       # attack period ?
       if (($client->{timeslot_client_start} <= $timeslot_current) &&
           ($timeslot_current <= $client->{timeslot_client_end})) {
+
+        # there are attackers
+        $existattacker = 1;
 
           # attack timeslot ?
         if (0 == (($timeslot_current + $client->{timeslot_client_start}) % $attack_timeslots)) {
@@ -260,6 +270,11 @@ sub main() {
 #print $count_node_domain;
       } # target domain
     } # client
+
+    # no attacker and exceeded end timeslot?
+    if ((0 == $existattacker) && ($timeslot_test_end < $timeslot_current)) {
+      last;
+    }
   } # timeslot
 
   close($ofp);
