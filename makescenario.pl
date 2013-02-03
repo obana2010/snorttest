@@ -180,6 +180,7 @@ sub main() {
     my $target_domain_name;
 #    if (int(rand(100 + 1)) <= $client_random_ratio) {
     if ($i < ($clients_count * $client_random_ratio / 100)) {
+#    if ($i < 80) {
 
       # random target
       #print "random\n";
